@@ -1,0 +1,78 @@
+// função do menu
+int menu(){
+    Console.Clear();
+    Console.WriteLine("======== Menu Do Sistema =======");
+    Console.WriteLine("1 - Funções sem vetor");
+    Console.WriteLine("2 - Funções com vetor");
+    Console.WriteLine("3 - Sair");
+    Console.Write("Digite a opção desejada: ");
+    return Convert.ToInt32(Console.ReadLine());
+}
+// função do menu secundário
+int secondary_menu(){
+    Console.Clear();
+    Console.WriteLine("======== Menu Secundário =======");
+    Console.WriteLine("1 - Inteiros em ordem crescente");
+    Console.WriteLine("2 -  Inteiros em ordem descrescente");
+    Console.WriteLine("3 - Inteiros impares (crescente)");
+    Console.WriteLine("4 - Somatório dos inteiros ");
+    Console.Write("Digite a opção desejada: ");
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+void Crescente(int n1,int n2){
+     if (n1<=n2){
+        Console.WriteLine(n1);
+     }else{
+        Crescente(n1++,n2);
+     }
+}
+
+
+//opção 1 do menu
+void menu_option_1(){
+    //vars 
+    int inicio,final;
+    Console.Write("Digite um número inicial: ");
+    inicio = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Digite um número final: ");
+    final = Convert.ToInt32(Console.ReadLine());
+    // get secondary menu
+    int opcao = secondary_menu();
+    if (opcao==1){
+        // função crescente
+        Crescente(inicio,final);
+    }else if (opcao==2){
+
+    }else if (opcao==3){
+
+    }else if (opcao==4){
+
+    }
+
+}
+
+void menu_option_2(){
+    // empty
+
+}
+
+//função principal
+void main(){
+    int opcao = menu();
+    while (opcao!=3 && opcao>0 && opcao<3)
+    {
+        
+        if (opcao==1){
+
+            menu_option_1();
+        }else if (opcao==2){
+            //Segundo MENU
+            
+        }
+
+        //callback menu
+        opcao = menu();
+    }
+}
+main();
